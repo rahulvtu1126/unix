@@ -1,0 +1,26 @@
+--Simple ssh command
+ssh userName@ip_address
+
+--Instead of ip_address we can use hostname or endpoint name. 
+
+
+--If we are using sshKey pair to connect. we can follow below command
+ssh -i "Private_key" username@ip_address
+
+-- How to generate sshKey pair
+
+#output will be stored in ~/.ssh/
+ ssh-keygen -t rsa
+
+#To output in specific directory
+
+ssh-keygen -t rsa -f ~/.ssh/directory_for_rsaKeys_output
+
+#Public key can be copied over all system where we want to connect through ssh through ssh-copy command
+
+ssh-copy-id -i ~/.ssh/id_rsa.pub userName@ip_address/home/peter/.ssh/authorized_keys
+
+ 
+ 
+
+
